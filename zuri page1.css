@@ -1,0 +1,467 @@
+/* globally removing all the padding and all margin in the elements */
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* resetting the viewport font-size */
+html{
+    font-size: 62.5%;
+}
+
+/* body styling */
+body{
+    line-height: 1.8;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:  white;
+}
+/* header */
+.heading{
+    padding: 1.5rem 0;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color:  rgb(255, 253, 245);
+}
+
+/* container styles */
+.container{
+    width: 80%;
+    margin: auto;
+    /* border: solid 2px; */
+}
+.flex-container{
+    display: flex;
+    align-items: center;
+}
+.sub-flex-container{
+    display: flex;
+    justify-content: space-between;
+    /* border: solid 2px; */
+    width: 100%;
+   /* */
+}
+/* reducing the width of the navigation bar images */
+.i4g-zuri-link{
+    width: 35%;
+}
+.i4g-zuri{
+    width: 100%;
+}
+.small-screen-btn,.big-screen-btn{
+    display: flex;
+    justify-content: space-between;
+    height: 4.4rem;
+    position: relative;
+}
+.small-thumb,.big-thumb{
+    position: absolute;
+    margin-left: -5rem;
+    background-color: red;
+    width:7.5rem;
+    margin-top: -1rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+/* for big screens */
+.navigation-links{
+    display: none;
+}
+/* styling the link in the navigation */
+/* globally */
+a{
+    text-decoration: none; 
+}
+/* styling for the small screens links or button */
+.small-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    /* text-align: center; */
+    border-radius: 10rem;
+    padding: 1rem 3.2rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+@media (min-width:804px){
+    .small-screen-btn{
+        display: none;
+    }
+    .navigation-links{
+        display: flex;
+        /* justify-content: center;
+        margin: auto;
+        align-content: center; */
+        height: 4.4rem;
+    }
+    .about,.why-us,
+    .stacks-covered{
+        display: flex;
+        justify-content: left;
+        align-content: left;
+        color: grey;
+        font-size: 1.8rem;
+        margin: 0 3.2rem 0 0;
+        padding: .6rem .8rem;
+    }
+    .faqs{
+        display: flex;
+        justify-content: left;
+        align-content: left;
+        color: grey;
+        font-size: 1.8rem;
+        margin: 0 9.6rem 0 0;
+        padding: .6rem .8rem;
+    }
+    .big-button{
+        line-height: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        /* text-align: center; */
+        border-radius: 10rem;
+        padding: 1rem 3.2rem;
+        font-size: 1.8rem;
+        color: white;
+    }
+}
+
+/* section-1 containers styling */
+.section-1{
+    /* border: solid 2px; */
+    display: flex;
+    /*  */
+    border-bottom: .1rem solid grey;
+}
+.flex-section-1{
+    display: flex;
+    flex-direction: column;
+}
+.lady1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lady1-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-1-line{
+    display: flex;
+    justify-content: flex-end;
+}
+.section-1-main-content{
+    /* border: solid 2px; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-1-curly-line{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+/* .section1-lady1-image{
+    padding: 1rem 0 0 2rem;
+} */
+/* text styling in section 1 */
+.section-1-text-1{
+    font-size: 1.8rem;
+    color: #E9433B;
+    text-align: center;
+}
+.section-1-text-2{
+    line-height: 4rem;
+    font-size: 3.7rem;
+    padding: 1rem 0 0;
+    font-weight: bold;
+    text-align: center;
+}
+.section-1-text-3{
+    font-size: 1.8rem;
+    color: #747374;
+    padding: 0 0 4rem;
+    text-align: center;
+    
+}
+
+/* link styling in section 1 */
+.section-1-link{
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    background-color: red;
+    color: white;
+    border-radius: 10rem;
+}
+/* image styling in section 1 */
+.lady1{
+    width: 50%;
+}
+.curly-line{
+    width: 25%;
+    margin-bottom: 3.2rem;
+}
+.line{
+    width: 50%;
+}
+.male1,.smallman{
+    display: none;
+}
+/* 1st media query for the small man image */
+@media (min-width:560px){
+    .smallman{
+        display: block;
+        margin: -15rem 0 0 -25rem;
+        /* width: 50%; */
+    }
+}
+
+@media (min-width:960px){
+.flex-section-1{
+    flex-direction: row;
+}
+.male1{
+    display: flex;
+    width: 100%;
+}
+.section1-lady1-image{
+    width: 50%;
+}
+.lady1{
+    width: 100%;
+}
+.section-1-male1{
+    width: 50%;
+}
+.section-1{
+    padding: 20rem 0 0;
+}
+}
+
+/* section 2 container styles */
+.section-2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    border-bottom: .1rem solid grey;
+}
+.section-2-div-1{
+    display: flex;
+    flex-direction: column;
+}
+.section-2-div-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.6rem 0 0 1.6rem;
+}
+.section-2-div-3{
+    display: flex;
+    flex-direction: column;
+}
+/* text styles in section 2 */
+.section-2-text-1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 3rem 0 0;
+}
+.section-2-text-3{
+    font-size: 1.6rem;
+    color: #747374;
+    text-align: right;
+    padding: 3rem 0 4rem;
+}
+/* link styling in section 2 */
+.section-2-link{
+    text-decoration: underline;
+    color: #6AB1C3;
+}
+/* image styling in section 3 */
+.section-2-image{
+    width: 50%; 
+}
+
+/* media query for section 2 */
+@media (min-width:700px){
+    .section-2{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .section-2-div-1{
+       width: 50%;
+       padding: 1.6rem 0 0 1.6rem;
+    }
+    .section-2-div-2{
+    width: 50%;
+    padding: 1.6rem 0 0 1.6rem;
+    }
+    .section-2-div-3{
+        width: 50%;
+    }
+    .section-2-text-1{
+        text-align: left;
+        padding: 1.6rem 0 0 1.6rem;
+    }
+}
+
+/* section 3 container styles */
+.flex-section-3{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0 0;
+}
+.content-1{
+    
+}
+.section-3-curly-line{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* text styling in section 3 */
+.question{
+font-size: 1.5rem;
+color: #E9433B;
+}
+.answer{
+font-size: 2rem;
+font-weight: 700;
+}
+/* image styling in section 3 */
+.star{
+    display: none;
+}
+.curly-line-3{
+    width: 20%;
+}
+
+/* media query for section 3 */
+@media (min-width:960px){
+    .star{
+        display: block;
+        width: 50%;
+    }
+    .flex-section-3{
+        flex-direction: row;
+    }
+    .section-3-star{
+        display: flex;
+         width: 50%;
+    }
+    .star-image{
+        display: flex;
+        justify-content:end ;
+    }
+    /* text styling in section 3 */
+.question{
+    font-size: 2.4rem;
+    color: #E9433B;
+    }
+    .answer{
+    font-size: 3rem;
+    font-weight: 700;
+    }
+    .content-1{
+        width: 50%;
+    }
+}
+
+/* section 4 container styling */
+.section-4-card-content-1,
+.section-4-card-content-2,
+.section-4-card-content-3,
+.section-4-card-content-4,
+.section-4-card-content-5,
+.section-4-card-content-6{
+    padding: 58px 48px 93px 50px!important;
+}
+.section-4-card-content-1{
+   background-color: red;
+   border-radius: 1.8rem;
+}
+.section-4-card-content-2,
+.section-4-card-content-3,
+.section-4-card-content-4,
+.section-4-card-content-5,
+.section-4-card-content-6{
+   background-color: rgb(255, 253, 245);
+   border-radius: 1.8rem;
+}
+.section-4-div-1,
+.section-4-div-2,
+.section-4-div-3,
+.section-4-div-4,
+.section-4-div-5,
+.section-4-div-6{
+   padding: 2.4rem 0 0 2.4rem; 
+}
+.section-column-4-cards{
+    display: flex;
+    flex-direction: column;
+}
+/* text-styles */
+.white{
+    color: white;
+}
+.black{
+    color: black;
+}
+.advantages-number{
+    font-size: 6rem;
+    font-weight: bold;
+}
+.advantages-content-1{
+    font-size: 3.6rem;
+    padding: 3.2rem 0 3.6rem;
+    font-weight: 500;
+}
+.advantages-content-2{
+    font-size: 1.8rem;
+}
+/* image styling in section 4 */
+.section-4-image-1,
+.section-4-image-2,
+.section-4-image-3,
+.section-4-image-4,
+.section-4-image-5,
+.section-4-image-6{
+    margin: -5.8rem -4.9rem 0 0;
+    width: 42%;
+}
+.section-4-image-1,
+.section-4-image-2,
+.section-4-image-3,
+.section-4-image-4,
+.section-4-image-5,
+.section-4-image-6{
+    display:flex;
+    flex-direction: column;
+    float: right;
+}
+
+/* media query for section 4 */
+@media (min-width:720px){
+.section-column-4-cards{
+    width: 90%;
+    /* margin: auto; */
+    flex-direction: row;
+}.section-4-div-1,
+.section-4-div-2,
+.section-4-div-3,
+.section-4-div-4,
+.section-4-div-5,
+.section-4-div-6{
+   width: 50%;
+}
+
+}
